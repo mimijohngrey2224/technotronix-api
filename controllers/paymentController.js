@@ -79,7 +79,7 @@ exports.initiatePayment = async (req, res) => {
       tx_ref: orderId,
       amount,
       currency,
-      redirect_url: "https://technotronix-frontend-zeta.vercel.app//thankyou",
+      redirect_url: "https://technotronix-frontend-zeta.vercel.app/thankyou",
       customer: {
         email: user.email,
         name: `${user.firstName} ${user.lastName}`,
@@ -96,7 +96,7 @@ exports.initiatePayment = async (req, res) => {
       },
     };
 
-    const response = await fetch("https://technotronix-frontend-zeta.vercel.app/payments", {
+    const response = await fetch("https://api.flutterwave.com/v3/payments", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${FLW_SECRET_KEY}`,
