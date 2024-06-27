@@ -13,7 +13,7 @@ connectDB()
 const app = express()
 
 app.use(cors({
-    origin: "https://technotronix-frontend-zeta.vercel.app/",
+    origin: "https://technotronix-frontend-zeta.vercel.app",
     allowedHeaders: ["Content-Type", "Authorization", "auth-token"],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     credentials: true
